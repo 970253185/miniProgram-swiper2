@@ -1,0 +1,49 @@
+.swiper-wrap .swiper-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 37rpx;
+}
+.swiper-wrap .imageContainer {
+  width: 683rpx;
+  margin: 0 auto;
+}
+.swiper-wrap .imageContainer .item {
+  width: 541rpx !important;
+  height: 317rpx !important;
+  overflow: visible !important;
+}
+.swiper-wrap .imageContainer .item.left,
+.swiper-wrap .imageContainer .item.right {
+  z-index: 5;
+}
+.swiper-wrap .imageContainer .item.active {
+  z-index: 10;
+}
+.swiper-wrap .imageContainer .item .itemImg {
+  position: absolute;
+  width: 541rpx;
+  height: 317rpx;
+  z-index: 5;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+.swiper-wrap .imageContainer .item .itemImg.left,
+.swiper-wrap .imageContainer .item .itemImg.right {
+  width: 405rpx;
+  height: 229rpx;
+}
+.swiper-wrap .imageContainer .item .itemImg.left {
+  left: 80%;
+  top: 15%;
+}
+.swiper-wrap .imageContainer .item .itemImg.right {
+  left: -20%;
+  top: 15%;
+}
+.swiper-wrap .imageContainer .item .itemImg.active {
+  opacity: 1;
+  z-index: 10;
+  left: 5%;
+}

@@ -1,0 +1,11 @@
+<!--components/swiper.wxml-->
+
+<view class="swiper-wrap">
+	<swiper class="imageContainer" bindchange="handleChange" previous-margin="50rpx" next-margin="50rpx" circular current="{{currentIndex}}">
+		<block wx:for="{{pic}}" wx:key="index">
+			<swiper-item class="item  {{currentIndex == index ? 'active': ''}} {{leftIndex === index ? 'left' : ''}}  {{rightIndex === index ? 'right' : ''}}">
+				<image class="itemImg {{currentIndex == index ? 'active': ''}} {{leftIndex === index ? 'left' : ''}}  {{rightIndex === index ? 'right' : ''}}" src="{{item}}"></image>
+			</swiper-item>
+		</block>
+	</swiper>
+</view>

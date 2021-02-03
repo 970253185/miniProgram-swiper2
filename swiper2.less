@@ -1,0 +1,61 @@
+.swiper-wrap {
+    .swiper-controls {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 37rpx;
+    }
+
+    .imageContainer {
+        width: 683rpx;
+        margin: 0 auto;
+
+        .item {
+            width: 541rpx !important;
+            height: 317rpx !important;
+            overflow: visible !important;
+
+            &.left,
+            &.right {
+                z-index: 5;
+            }
+
+            &.active {
+                z-index: 10;
+            }
+
+
+            .itemImg {
+                position: absolute;
+                width: 541rpx;
+                height: 317rpx;
+                z-index: 5;
+                opacity: 0.7;
+                transition: all .2s;
+
+                &.left,
+                &.right {
+                    width: 405rpx;
+                    height: 229rpx;
+                }
+
+                &.left {
+                    left: 80%;
+                    top: 15%;
+                }
+
+                &.right {
+                    left: -20%;
+                    top: 15%;
+                }
+
+                &.active {
+                    opacity: 1;
+                    z-index: 10;
+                    left: 5%;
+                }
+            }
+        }
+    }
+}
